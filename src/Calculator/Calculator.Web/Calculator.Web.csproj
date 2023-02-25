@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.3" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
@@ -24,6 +25,14 @@
     <ItemGroup>
       <ProjectReference Include="..\Calculator.Application\Calculator.Application.csproj" />
       <ProjectReference Include="..\Calculator.Infrastructure\Calculator.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Expressions\Views\ExpressionsCalculator.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Expressions\Views\Index.cshtml" />
     </ItemGroup>
 
 </Project>

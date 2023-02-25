@@ -15,7 +15,10 @@ public static class WebServiceExtensions
             .AddOptionsMonitors(configuration)
             .AddSwaggerGen()
             .AddFluentValidation()
-            .AddControllers();
+            .AddMvc()
+            .AddRazorRuntimeCompilation();
+
+        services.AddControllersWithViews();
         
         return services;
     }
@@ -28,7 +31,7 @@ public static class WebServiceExtensions
         return services;
     }
 
-    
+
     private static IServiceCollection AddFluentValidation(this IServiceCollection services)
         => services
             .AddFluentValidationAutoValidation()

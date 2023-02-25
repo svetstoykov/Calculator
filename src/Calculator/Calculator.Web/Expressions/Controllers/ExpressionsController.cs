@@ -14,6 +14,10 @@ public class ExpressionsController : BaseApiController
     {
     }
 
+    [HttpGet]
+    public IActionResult Index()
+        => View("~/Expressions/Views/Index.cshtml");
+
     [HttpPost]
     public async Task<IActionResult> Solve(ExpressionRequestModel requestModel)
         => Ok(await Mediator.Send(new Solve.Command(requestModel.Expression)));

@@ -2,9 +2,9 @@
 
 public static class StringExtensions
 {
-    public static bool IsOpeningParentheses(this string symbol)
+    public static bool IsOpeningParenthesis(this string symbol)
         => symbol.First() == '(';
 
-    public static bool IsClosingParentheses(this string symbol)
+    public static bool IsClosingParenthesis(this string symbol)
         => symbol.First() == ')';
 }

@@ -12,40 +12,41 @@ public class EvaluationService : IEvaluationService
         var operatorsAndNumbers = SplitExpressionIntoOperatorsAndNumbers(expression)
             .ToList();
 
-        var (result, _) = Evaluate(operatorsAndNumbers, default); 
+        var (result, _) = Evaluate(operatorsAndNumbers, default);
 
         return result;
     }
-    
+
     private static ValueTuple<double, int> Evaluate(IList<string> operatorsAndNumbers, int index)
     {
         var outerExpression = new List<string>();
         for (var i = index; i < operatorsAndNumbers.Count; i++)
         {
-            var entry = operatorsAndNumbers[i];
-            if (entry.IsOpeningParentheses())
+            var currentItem = operatorsAndNumbers[i];
+            if (currentItem.IsOpeningParenthesis())
             {
-                var (innerExpressionValue, advancedIndex) = Evaluate(operatorsAndNumbers, ++i);
+                var (innerExpressionValue, advancedIndex)
+                    = Evaluate(operatorsAndNumbers, ++i);
 
-                outerExpression.Add(innerExpressionValue
-                    .ToString(CultureInfo.InvariantCulture));
+                outerExpression.Add(
+                    innerExpressionValue.ToString(CultureInfo.InvariantCulture));
 
                 i = advancedIndex;
-                
+
                 continue;
             }
 
-            if (entry.IsClosingParentheses())
+            if (currentItem.IsClosingParenthesis())
             {
                 return (EvaluateBasicExpression(outerExpression), i);
             }
 
-            outerExpression.Add(entry);
+            outerExpression.Add(currentItem);
         }
 
         return (EvaluateBasicExpression(outerExpression), default);
     }
-    
+
     private static double EvaluateBasicExpression(IList<string> operatorsAndNumbers)
     {
         if (!operatorsAndNumbers.Any())
@@ -55,7 +56,7 @@ public class EvaluationService : IEvaluationService
 
         var stack = new Stack<double>();
         var @operator = '+';
-        
+
         double result = 0;
         double number = 0;
         for (var i = 0; i < operatorsAndNumbers.Count; i++)
@@ -97,25 +98,27 @@ public class EvaluationService : IEvaluationService
 
         return result;
     }
-    
+
     private static IEnumerable<string> SplitExpressionIntoOperatorsAndNumbers(string expression)
     {
         var result = new List<string>();
         for (var i = 0; i < expression.Length; i++)
         {
-            var t = expression[i];
-            if (t == ' ')
+            var currentSymbol = expression[i];
+            if (currentSymbol == ' ')
             {
                 continue;
             }
 
-            if (char.IsDigit(t))
+            if (char.IsDigit(currentSymbol))
             {
                 var numBuilder = new StringBuilder();
-                numBuilder.Append(t);
-                while (i + 1 < expression.Length && char.IsDigit(expression[i + 1]))
+                numBuilder.Append(currentSymbol);
+
+                var nextChar = expression[i++];
+                while (i + 1 < expression.Length && char.IsDigit(nextChar))
                 {
-                    numBuilder.Append(expression[++i]);
+                    numBuilder.Append(nextChar);
                 }
 
                 result.Add(numBuilder.ToString());
@@ -123,7 +126,7 @@ public class EvaluationService : IEvaluationService
                 continue;
             }
 
-            result.Add(t.ToString());
+            result.Add(currentSymbol.ToString());
         }
 
         return result;

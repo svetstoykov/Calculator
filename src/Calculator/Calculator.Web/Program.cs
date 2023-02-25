@@ -1,4 +1,5 @@
 using Calculator.Application.Common.Extensions;
+using Calculator.Infrastructure.Common.InfrastructureServices;
 using Calculator.Web.Common.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddWebServices(builder.Configuration)
-    .AddApplicationServices();
+    .AddApplicationServices()
+    .AddInfrastructureServices();
 
 var app = builder.Build();
 
@@ -19,6 +21,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
 
 app.UseAuthorization();
 

@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Calculator.Application.Common.Extensions;
+namespace Calculator.Infrastructure.Common.InfrastructureServices;
 
-public static class ApplicationServiceExtensions
+public static class InfrastructureServicesExtensions
 {
-    public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
         => services
             .AddMediatR(c => c.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()))
             .Scan(scan => scan

@@ -1,6 +1,7 @@
 using Calculator.Application.Common.Extensions;
 using Calculator.Infrastructure.Common.InfrastructureServices;
 using Calculator.Web.Common.Extensions;
+using Calculator.Web.Common.Middleware.ErrorHandling;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.MapControllers();
 

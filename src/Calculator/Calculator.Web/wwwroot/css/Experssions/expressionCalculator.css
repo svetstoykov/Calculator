@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     background: linear-gradient(to bottom, #87CEFA, #007FFF);
+    text-align: center;
 }
 
 .container {
@@ -27,22 +28,29 @@ html, body {
     margin-left: 10px;
 }
 
-.result-container {
+.history-container {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 10px;
     width: 300px;
 }
 
-.result-list {
+.history-list {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+    padding: 0;
 }
 
-.result-list li {
+.history-list li {
     padding: 2px;
     text-align: center;
     font-weight: bold;
+}
+
+.history-span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: underline;
 }

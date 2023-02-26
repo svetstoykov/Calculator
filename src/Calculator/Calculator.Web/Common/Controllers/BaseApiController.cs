@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Calculator.Application.Common.Result.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,4 +17,7 @@ public class BaseApiController : Controller
       Mediator = mediator;
       Mapper = mapper;
    }
+   
+   protected ActionResult HandleResult<TOutputData>(Result<TOutputData> result) 
+      => result.IsSuccessful ? Ok(result) : BadRequest(result);
 }

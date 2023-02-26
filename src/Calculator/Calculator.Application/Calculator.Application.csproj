@@ -15,4 +15,8 @@
       <PackageReference Include="Scrutor" Version="4.2.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Common\Result" />
+    </ItemGroup>
+
 </Project>

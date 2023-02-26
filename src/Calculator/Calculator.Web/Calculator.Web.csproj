@@ -36,8 +36,4 @@
       <EmbeddedResource Include="Expressions\Views\Index.cshtml" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Expressions\Scripts" />
-    </ItemGroup>
-
 </Project>

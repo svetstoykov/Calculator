@@ -1,5 +1,4 @@
-﻿
-let settings = {}
+﻿let settings = {}
 
 function configure(solveExpressionUrl) {
     settings.solveExpressionUrl = solveExpressionUrl
@@ -8,8 +7,9 @@ function configure(solveExpressionUrl) {
 function solveExpression() {
     const input = $('#expression-input');
     const url = $('#expression-form').attr('url');
+    const historyList = $('#expression-history-list');
     const data = {
-        Expression: input.val() 
+        Expression: input.val()
     };
 
     $.ajax({
@@ -17,18 +17,27 @@ function solveExpression() {
         method: 'POST',
         data: JSON.stringify(data),
         contentType: "application/json",
-        success: function(response) {
-            console.log('Received data:', response);
-            // Do something with the response data
+        success: function (response) {
+            if (response.isSuccessful) {
+                historyList.prepend
+                (`<li>
+                    ${data.Expression}
+                </li>
+                <li>
+                   = ${response.data}
+                </li>`)
+                return;
+            }
+            
+            alert(response.Message);
         },
-        error: function(xhr, status, error) {
-            console.error('Error sending POST request:', error);
-            // Handle the error
+        complete:function (){
+            input.val('')
         }
     });
 }
 
-$('#expression-form').submit(function(event) {
+$('#expression-form').submit(function (event) {
     event.preventDefault();
     solveExpression();
-  });
+});

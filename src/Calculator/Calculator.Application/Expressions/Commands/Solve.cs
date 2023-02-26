@@ -1,4 +1,5 @@
-﻿using Calculator.Application.Expressions.Interfaces;
+﻿using Calculator.Application.Common.Result.Models;
+using Calculator.Application.Expressions.Interfaces;
 using Calculator.Application.Expressions.Models;
 using MediatR;
 
@@ -6,7 +7,7 @@ namespace Calculator.Application.Expressions.Commands;
 
 public class Solve
 {
-    public class Command : IRequest<double>
+    public class Command : IRequest<Result<double>>
     {
         public Command(string expression)
         {
@@ -16,7 +17,7 @@ public class Solve
         public string Expression { get; }
     }
     
-    public class Handler : IRequestHandler<Command, double>
+    public class Handler : IRequestHandler<Command, Result<double>>
     {
         private readonly IEvaluatedExpressionsHistoryService _historyService;
         private readonly IEvaluationService _evaluationService;
@@ -27,7 +28,7 @@ public class Solve
             _evaluationService = evaluationService;
         }
 
-        public async Task<double> Handle(Command request, CancellationToken cancellationToken)
+        public async Task<Result<double>> Handle(Command request, CancellationToken cancellationToken)
         {
             var result = _evaluationService
                 .Calculate(request.Expression);
@@ -35,7 +36,7 @@ public class Solve
             await _historyService
                 .SaveSolvedExpressionResultAsync(request.Expression, result);
             
-            return result;
+            return Result<double>.Success(result);
         }
     }
 }

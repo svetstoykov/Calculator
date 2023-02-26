@@ -24,7 +24,7 @@ public class ExpressionsController : BaseApiController
 
         var viewModel = new ExpressionHistoryViewModel
         {
-            SolvedExpressions = Mapper.Map<IEnumerable<SolvedExpressionViewModel>>(history)
+            SolvedExpressions = Mapper.Map<IEnumerable<SolvedExpressionViewModel>>(history.Data)
         };
 
         return View("~/Expressions/Views/Index.cshtml", viewModel);
@@ -32,5 +32,5 @@ public class ExpressionsController : BaseApiController
 
     [HttpPost]
     public async Task<IActionResult> Solve(ExpressionRequestModel requestModel)
-        => Ok(await Mediator.Send(new Solve.Command(requestModel.Expression)));
+        => HandleResult(await Mediator.Send(new Solve.Command(requestModel.Expression)));
 }

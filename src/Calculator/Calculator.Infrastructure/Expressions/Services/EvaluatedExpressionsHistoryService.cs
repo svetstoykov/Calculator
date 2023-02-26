@@ -23,18 +23,39 @@ public class EvaluatedExpressionsHistoryService : IEvaluatedExpressionsHistorySe
 
     public async Task<ICollection<ExpressionHistoryModel>> GetOrCreateExpressionSolveHistoryAsync()
     {
+        var history = GetOrCreateHistoryFromCache();
+
+        return await Task.FromResult(history!);
+    }
+    
+    public async Task<bool> SaveSolvedExpressionResultAsync(string expression, double result)
+    {
+        var history = GetOrCreateHistoryFromCache();
+
+        history.Add(new ExpressionHistoryModel
+        {
+            Expression = expression,
+            Result = result,
+            DateCreated = DateTime.Now
+        });
+        
+        return await Task.FromResult(true);
+    }
+
+    private ICollection<ExpressionHistoryModel> GetOrCreateHistoryFromCache()
+    {
         var cacheExpirationInSeconds = _configurationOptionsMonitor
             .CurrentValue.CacheExpirationTimeInSeconds;
-        
+
         var history = _cache.GetOrCreate<ICollection<ExpressionHistoryModel>>(
             CacheKey, cacheEntry =>
             {
                 cacheEntry.AbsoluteExpirationRelativeToNow = TimeSpan
                     .FromSeconds(cacheExpirationInSeconds);
-                
+
                 return new List<ExpressionHistoryModel>();
             });
-
-        return await Task.FromResult(history!);
+        
+        return history!;
     }
 }

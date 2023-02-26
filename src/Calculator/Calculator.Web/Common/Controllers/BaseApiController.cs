@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Calculator.Web.Common.Controllers;
@@ -7,10 +8,12 @@ namespace Calculator.Web.Common.Controllers;
 [Route("[controller]/[action]")]
 public class BaseApiController : Controller
 {
-   protected IMediator Mediator;
+   protected readonly IMediator Mediator;
+   protected readonly IMapper Mapper;
 
-   public BaseApiController(IMediator mediator)
+   public BaseApiController(IMediator mediator, IMapper mapper)
    {
       Mediator = mediator;
+      Mapper = mapper;
    }
 }

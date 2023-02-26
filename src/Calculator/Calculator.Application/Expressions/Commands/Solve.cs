@@ -6,7 +6,7 @@ namespace Calculator.Application.Expressions.Commands;
 
 public class Solve
 {
-    public class Command : IRequest<bool>
+    public class Command : IRequest<double>
     {
         public Command(string expression)
         {
@@ -16,7 +16,7 @@ public class Solve
         public string Expression { get; }
     }
     
-    public class Handler : IRequestHandler<Command, bool>
+    public class Handler : IRequestHandler<Command, double>
     {
         private readonly IEvaluatedExpressionsHistoryService _historyService;
         private readonly IEvaluationService _evaluationService;
@@ -27,22 +27,15 @@ public class Solve
             _evaluationService = evaluationService;
         }
 
-        public async Task<bool> Handle(Command request, CancellationToken cancellationToken)
+        public async Task<double> Handle(Command request, CancellationToken cancellationToken)
         {
             var result = _evaluationService
                 .Calculate(request.Expression);
 
-            var history = await _historyService
-                .GetOrCreateExpressionSolveHistoryAsync();
-
-            history.Add(new ExpressionHistoryModel
-            {
-                Expression = request.Expression,
-                Result = result,
-                DateCreated = DateTime.UtcNow
-            });
+            await _historyService
+                .SaveSolvedExpressionResultAsync(request.Expression, result);
             
-            return true;
+            return result;
         }
     }
 }

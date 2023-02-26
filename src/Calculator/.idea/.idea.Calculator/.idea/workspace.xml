@@ -7,13 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="949353a6-b356-4ec4-b7a6-c4c567a0ba19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/ExpressionHistoryViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Scripts/expressionCalculator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Mappings/ExpressionsMappings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/SolvedExpressionViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculator.Web/wwwroot/css/Experssions/expressionCalculator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Calculator.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Calculator.Web.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Calculator.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Calculator.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Solve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Solve.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluatedExpressionsHistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluatedExpressionsHistoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Controllers/BaseApiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Controllers/BaseApiController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Extensions/WebServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Extensions/WebServiceExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Controllers/ExpressionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Controllers/ExpressionsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/ExpressionRequestModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Request/ExpressionRequestModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/ExpressionHistoryViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/ExpressionHistoryViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Views/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Views/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +30,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/59cd7a17e4fcffda1ba3687b386939b4e155ba482f85c8fe9993bc8373d7f93/ApiBehaviorApplicationModelProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74356f198b598e97eaeea83e8b7b1f2bfe27c0a39fedf86bb7dc44827fbda/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -109,7 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677343257831</updated>
-      <workItem from="1677343258928" duration="5439000" />
+      <workItem from="1677343258928" duration="8205000" />
     </task>
     <servers />
   </component>
@@ -120,5 +129,24 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Solve.cs</url>
+          <line>31</line>
+          <properties documentPath="D:\Other\Calculator\src\Calculator\Calculator.Application\Expressions\Commands\Solve.cs" initialLine="31" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="956" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1035" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -11,6 +11,7 @@ public static class WebServiceExtensions
     public static IServiceCollection AddWebServices(this IServiceCollection services, IConfiguration configuration)
     {
         services
+            .AddAutoMapper(Assembly.GetExecutingAssembly())
             .AddMemoryCache()
             .AddOptionsMonitors(configuration)
             .AddSwaggerGen()

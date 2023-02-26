@@ -1,11 +1,22 @@
-﻿function sendPostRequest() {
+﻿
+let settings = {}
+
+function configure(solveExpressionUrl) {
+    settings.solveExpressionUrl = solveExpressionUrl
+}
+
+function solveExpression() {
     const input = $('#expression-input');
-    const expression = input.val();
+    const url = $('#expression-form').attr('url');
+    const data = {
+        Expression: input.val() 
+    };
 
     $.ajax({
-        url: '/post-endpoint',
+        url: url,
         method: 'POST',
-        data: { expression },
+        data: JSON.stringify(data),
+        contentType: "application/json",
         success: function(response) {
             console.log('Received data:', response);
             // Do something with the response data
@@ -19,5 +30,5 @@
 
 $('#expression-form').submit(function(event) {
     event.preventDefault();
-    sendPostRequest();
+    solveExpression();
   });

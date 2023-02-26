@@ -115,10 +115,9 @@ public class EvaluationService : IEvaluationService
                 var numBuilder = new StringBuilder();
                 numBuilder.Append(currentSymbol);
 
-                var nextChar = expression[i++];
-                while (i + 1 < expression.Length && char.IsDigit(nextChar))
+                while (i + 1 < expression.Length && char.IsDigit(expression[i + 1]))
                 {
-                    numBuilder.Append(nextChar);
+                    numBuilder.Append(expression[++i]);
                 }
 
                 result.Add(numBuilder.ToString());

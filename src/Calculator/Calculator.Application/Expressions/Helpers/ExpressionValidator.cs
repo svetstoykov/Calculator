@@ -14,9 +14,6 @@ public static class ExpressionValidator
             = "Expression can only contain: [0-9, *, /, +, -, (, )]";
     }
 
-    private static readonly IReadOnlyCollection<char> AllowedSymbols 
-        = new List<char>{'1', '2', '3', '4'}.AsReadOnly();
-
     public static void Validate(string expression)
     {
         ValidateSymbols(expression);
@@ -41,18 +38,16 @@ public static class ExpressionValidator
             .Select(c => c.ToString())
             .ToList();
         
-        for (var i = 0; i < allParentheses.Count; i++)
+        foreach (var parentheses in allParentheses)
         {
-            var parentheses = allParentheses[i];
-            if (i == 0 && parentheses.IsClosingParenthesis())
-            {
-                throw new ArgumentException(
-                    ErrorMessage.ForInvalidParenthesis);
-            }
-
             if (parentheses.IsClosingParenthesis())
             {
-                stack.Pop();
+                if (!stack.TryPop(out _))
+                {
+                    throw new ArgumentException(
+                        ErrorMessage.ForInvalidParenthesis);
+                }
+                
                 continue;
             }
             

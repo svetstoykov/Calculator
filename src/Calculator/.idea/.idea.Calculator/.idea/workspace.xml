@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="949353a6-b356-4ec4-b7a6-c4c567a0ba19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Helpers/ExpressionValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Middleware/ErrorHandling/ErrorHandlerMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Middleware/ErrorHandling/ErrorHandlerMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Helpers/ExpressionValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Helpers/ExpressionValidator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677343257831</updated>
-      <workItem from="1677343258928" duration="14019000" />
+      <workItem from="1677343258928" duration="14331000" />
     </task>
     <servers />
   </component>

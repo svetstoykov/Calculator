@@ -8,7 +8,7 @@ public class ErrorHandlerMiddleware
 {
     private class ErrorMessage
     {
-        public const string ForNonDevelopmentEnv = "Something went wrong";
+        public const string FromCommonError = "Something went wrong";
     }
     
     private readonly RequestDelegate _next;
@@ -37,9 +37,9 @@ public class ErrorHandlerMiddleware
                 _ => (int)HttpStatusCode.InternalServerError
             };
 
-            var exceptionResponse = _environment.IsDevelopment()
-                ? Result<object>.Failure(ex.StackTrace)
-                : Result<object>.Failure(ErrorMessage.ForNonDevelopmentEnv);
+            var exceptionResponse = Result<object>.Failure(string.IsNullOrEmpty(ex.Message)
+                ? ErrorMessage.FromCommonError
+                : ex.Message);
 
             await response.WriteAsync(JsonSerializer.Serialize(exceptionResponse, new JsonSerializerOptions
             {

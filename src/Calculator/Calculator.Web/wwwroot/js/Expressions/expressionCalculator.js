@@ -18,20 +18,18 @@ function solveExpression() {
         data: JSON.stringify(data),
         contentType: "application/json",
         success: function (response) {
-            if (response.isSuccessful) {
-                historyList.prepend
-                (`<li>
+            historyList.prepend
+            (`<li>
                     ${data.Expression}
                 </li>
                 <li>
                    = ${response.data}
                 </li>`)
-                return;
-            }
-            
-            alert(response.Message);
         },
-        complete:function (){
+        error: function (response) {
+            alert(response.responseJSON.message);
+        },
+        complete: function () {
             input.val('')
         }
     });

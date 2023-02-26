@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using System.Text;
 using Calculator.Application.Common.Extensions;
+using Calculator.Application.Expressions.Helpers;
 using Calculator.Application.Expressions.Interfaces;
 
 namespace Calculator.Application.Expressions.Services;
@@ -9,6 +10,8 @@ public class EvaluationService : IEvaluationService
 {
     public double Calculate(string expression)
     {
+        ExpressionValidator.Validate(expression);
+        
         var operatorsAndNumbers = SplitExpressionIntoOperatorsAndNumbers(expression)
             .ToList();
 

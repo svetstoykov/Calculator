@@ -7,16 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="949353a6-b356-4ec4-b7a6-c4c567a0ba19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Calculator.Web/Views/Expressions/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/ExpressionHistoryViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Scripts/expressionCalculator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Common/Extensions/StringExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Common/Extensions/StringExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator.Web/Calculator.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Calculator.Web.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Controllers/BaseApiController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Controllers/BaseApiController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Extensions/WebServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Extensions/WebServiceExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Controllers/ExpressionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Controllers/ExpressionsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/ExpressionRequestModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Request/ExpressionRequestModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Views/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Views/Index.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MEqnCUOoEb9U5iIFPtfKpe55NZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,9 +37,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "RiderNuGetOptionsPageId",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\JetBrains Rider 2022.1.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -105,7 +109,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677343257831</updated>
-      <workItem from="1677343258928" duration="1304000" />
+      <workItem from="1677343258928" duration="5439000" />
     </task>
     <servers />
   </component>
@@ -114,6 +118,7 @@
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Calculator.Application.Expressions.Commands;
 
-public class Solve
+public class Evaluate
 {
     public class Command : IRequest<Result<double>>
     {
@@ -34,7 +34,7 @@ public class Solve
                 .Calculate(request.Expression);
 
             await _historyService
-                .SaveSolvedExpressionResultAsync(request.Expression, result);
+                .SaveEvaluatedExpressionResultAsync(request.Expression, result);
             
             return Result<double>.Success(result);
         }

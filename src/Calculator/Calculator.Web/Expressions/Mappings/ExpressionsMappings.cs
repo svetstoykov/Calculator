@@ -8,6 +8,6 @@ public class ExpressionsMappings : Profile
 {
     public ExpressionsMappings()
     {
-        CreateMap<ExpressionHistoryModel, SolvedExpressionViewModel>();
+        CreateMap<EvaluatedExpressionHistoryModel, EvaluatedExpressionHistoryViewModel>();
     }
 }

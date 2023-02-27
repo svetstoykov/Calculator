@@ -2,6 +2,6 @@
 
 public class ExpressionHistoryViewModel
 {
-    public IEnumerable<SolvedExpressionViewModel> SolvedExpressions { get; set; }
-        = new List<SolvedExpressionViewModel>();
+    public IEnumerable<EvaluatedExpressionHistoryViewModel> EvaluatedExpressionsHistory { get; set; }
+        = new List<EvaluatedExpressionHistoryViewModel>();
 }

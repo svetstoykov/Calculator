@@ -2,7 +2,6 @@
 using Calculator.Application.Expressions.Commands;
 using Calculator.Application.Expressions.Queries;
 using Calculator.Web.Common.Controllers;
-using Calculator.Web.Expressions.Models;
 using Calculator.Web.Expressions.Models.Request;
 using Calculator.Web.Expressions.Models.Response.History;
 using MediatR;
@@ -20,17 +19,17 @@ public class ExpressionsController : BaseApiController
     [HttpGet]
     public async Task<IActionResult> Index()
     {
-        var history = await Mediator.Send(new GetSolvedExpressionsHistory.Query());
+        var history = await Mediator.Send(new GetEvaluatedExpressionsHistory.Query());
 
         var viewModel = new ExpressionHistoryViewModel
         {
-            SolvedExpressions = Mapper.Map<IEnumerable<SolvedExpressionViewModel>>(history.Data)
+            EvaluatedExpressionsHistory = Mapper.Map<IEnumerable<EvaluatedExpressionHistoryViewModel>>(history.Data)
         };
 
         return View("~/Expressions/Views/Index.cshtml", viewModel);
     }
 
     [HttpPost]
-    public async Task<IActionResult> Solve(ExpressionRequestModel requestModel)
-        => HandleResult(await Mediator.Send(new Solve.Command(requestModel.Expression)));
+    public async Task<IActionResult> Evaluate(ExpressionRequestModel requestModel)
+        => HandleResult(await Mediator.Send(new Evaluate.Command(requestModel.Expression)));
 }

@@ -2,5 +2,5 @@
 
 public class ExpressionRequestModel
 {
-    public string? Expression { get; set; }
+    public string Expression { get; set; } = null!;
 }

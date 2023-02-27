@@ -1,10 +1,4 @@
-﻿let settings = {}
-
-function configure(solveExpressionUrl) {
-    settings.solveExpressionUrl = solveExpressionUrl
-}
-
-function solveExpression() {
+﻿function solveExpression() {
     const input = $('#expression-input');
     const url = $('#expression-form').attr('url');
     const historyList = $('#expression-history-list');

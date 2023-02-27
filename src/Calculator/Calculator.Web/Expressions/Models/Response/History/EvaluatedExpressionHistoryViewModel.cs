@@ -1,6 +1,6 @@
-﻿namespace Calculator.Application.Expressions.Models;
+﻿namespace Calculator.Web.Expressions.Models.Response.History;
 
-public class ExpressionHistoryModel
+public class EvaluatedExpressionHistoryViewModel
 {
     public string Expression { get; set; } = null!;
 

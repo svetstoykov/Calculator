@@ -7,7 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="949353a6-b356-4ec4-b7a6-c4c567a0ba19" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Calculator.Web/Common/Filters/CustomValidationFilterAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Validators/ExpressionRequestModelValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Common/Result/Models/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Common/Result/Models/Result.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Solve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Evaluate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Helpers/ExpressionValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Helpers/ExpressionValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluatedExpressionsHistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluatedExpressionsHistoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Models/ExpressionHistoryModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Models/EvaluatedExpressionHistoryModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetSolvedExpressionsHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetEvaluatedExpressionsHistory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Extensions/WebServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Extensions/WebServiceExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Middleware/ErrorHandling/ErrorHandlerMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Middleware/ErrorHandling/ErrorHandlerMiddleware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Controllers/ExpressionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Controllers/ExpressionsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Mappings/ExpressionsMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Mappings/ExpressionsMappings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Request/ExpressionRequestModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Request/ExpressionRequestModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/ExpressionHistoryViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/ExpressionHistoryViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/SolvedExpressionViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/EvaluatedExpressionHistoryViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Views/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Views/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,25 +49,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "RiderNuGetOptionsPageId",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\JetBrains Rider 2022.1.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;RiderNuGetOptionsPageId&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\JetBrains Rider 2022.1.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\svetlozar.stoykov\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\svetlozar.stoykov\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\svetlozar.stoykov\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\svetlozar.stoykov\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\svetlozar.stoykov\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\svetlozar.stoykov\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Calculator.Web: IIS Express">
     <configuration name="Calculator.Web: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Calculator.Web/Calculator.Web.csproj" />
@@ -104,7 +123,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677343257831</updated>
-      <workItem from="1677343258928" duration="14331000" />
+      <workItem from="1677343258928" duration="15159000" />
+      <workItem from="1677500165665" duration="2884000" />
     </task>
     <servers />
   </component>

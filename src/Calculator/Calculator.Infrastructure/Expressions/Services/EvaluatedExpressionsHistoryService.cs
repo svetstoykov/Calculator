@@ -21,18 +21,18 @@ public class EvaluatedExpressionsHistoryService : IEvaluatedExpressionsHistorySe
         _configurationOptionsMonitor = configurationOptionsMonitor;
     }
 
-    public async Task<ICollection<ExpressionHistoryModel>> GetOrCreateExpressionSolveHistoryAsync()
+    public async Task<ICollection<EvaluatedExpressionHistoryModel>> GetOrCreateEvaluatedExpressionsHistoryAsync()
     {
         var history = GetOrCreateHistoryFromCache();
 
         return await Task.FromResult(history!);
     }
     
-    public async Task<bool> SaveSolvedExpressionResultAsync(string expression, double result)
+    public async Task<bool> SaveEvaluatedExpressionResultAsync(string expression, double result)
     {
         var history = GetOrCreateHistoryFromCache();
 
-        history.Add(new ExpressionHistoryModel
+        history.Add(new EvaluatedExpressionHistoryModel
         {
             Expression = expression,
             Result = result,
@@ -42,18 +42,18 @@ public class EvaluatedExpressionsHistoryService : IEvaluatedExpressionsHistorySe
         return await Task.FromResult(true);
     }
 
-    private ICollection<ExpressionHistoryModel> GetOrCreateHistoryFromCache()
+    private ICollection<EvaluatedExpressionHistoryModel> GetOrCreateHistoryFromCache()
     {
         var cacheExpirationInSeconds = _configurationOptionsMonitor
             .CurrentValue.CacheExpirationTimeInSeconds;
 
-        var history = _cache.GetOrCreate<ICollection<ExpressionHistoryModel>>(
+        var history = _cache.GetOrCreate<ICollection<EvaluatedExpressionHistoryModel>>(
             CacheKey, cacheEntry =>
             {
                 cacheEntry.AbsoluteExpirationRelativeToNow = TimeSpan
                     .FromSeconds(cacheExpirationInSeconds);
 
-                return new List<ExpressionHistoryModel>();
+                return new List<EvaluatedExpressionHistoryModel>();
             });
         
         return history!;

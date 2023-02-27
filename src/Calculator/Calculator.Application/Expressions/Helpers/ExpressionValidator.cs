@@ -16,11 +16,11 @@ public static class ExpressionValidator
 
     public static void Validate(string expression)
     {
-        ValidateSymbols(expression);
+        ValidateAllowedSymbols(expression);
         ValidateParentheses(expression);
     }
     
-    private static void ValidateSymbols(string expression)
+    private static void ValidateAllowedSymbols(string expression)
     {
         const string pattern = @"^[0-9\+\-\*\(\)\/\s]*$";
         if (!Regex.IsMatch(expression, pattern))

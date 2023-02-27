@@ -5,12 +5,12 @@ using MediatR;
 
 namespace Calculator.Application.Expressions.Queries;
 
-public class GetSolvedExpressionsHistory
+public class GetEvaluatedExpressionsHistory
 {
-    public class Query : IRequest<Result<IEnumerable<ExpressionHistoryModel>>>
+    public class Query : IRequest<Result<IEnumerable<EvaluatedExpressionHistoryModel>>>
     { }
     
-    public class Handler : IRequestHandler<Query, Result<IEnumerable<ExpressionHistoryModel>>>
+    public class Handler : IRequestHandler<Query, Result<IEnumerable<EvaluatedExpressionHistoryModel>>>
     {
         private readonly IEvaluatedExpressionsHistoryService _historyService;
         
@@ -19,14 +19,14 @@ public class GetSolvedExpressionsHistory
             _historyService = historyService;
         }
 
-        public async Task<Result<IEnumerable<ExpressionHistoryModel>>> Handle(Query request,
+        public async Task<Result<IEnumerable<EvaluatedExpressionHistoryModel>>> Handle(Query request,
             CancellationToken cancellationToken)
         {
             var history = (await _historyService
-                .GetOrCreateExpressionSolveHistoryAsync())
+                .GetOrCreateEvaluatedExpressionsHistoryAsync())
                 .OrderByDescending(h => h.DateCreated);
 
-            return Result<IEnumerable<ExpressionHistoryModel>>
+            return Result<IEnumerable<EvaluatedExpressionHistoryModel>>
                 .Success(history);
         }
     }

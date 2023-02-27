@@ -8,16 +8,14 @@ public class ErrorHandlerMiddleware
 {
     private class ErrorMessage
     {
-        public const string FromCommonError = "Something went wrong";
+        public const string WithGenericWording = "Something went wrong";
     }
     
     private readonly RequestDelegate _next;
-    private readonly IHostEnvironment _environment;
 
-    public ErrorHandlerMiddleware(RequestDelegate next, IHostEnvironment environment)
+    public ErrorHandlerMiddleware(RequestDelegate next)
     {
         _next = next;
-        _environment = environment;
     }
 
     public async Task Invoke(HttpContext context)
@@ -38,7 +36,7 @@ public class ErrorHandlerMiddleware
             };
 
             var exceptionResponse = Result<object>.Failure(string.IsNullOrEmpty(ex.Message)
-                ? ErrorMessage.FromCommonError
+                ? ErrorMessage.WithGenericWording
                 : ex.Message);
 
             await response.WriteAsync(JsonSerializer.Serialize(exceptionResponse, new JsonSerializerOptions

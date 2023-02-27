@@ -1,8 +1,9 @@
 ﻿using System.Reflection;
 using Calculator.Application.Expressions.Models.Settings;
+using Calculator.Web.Common.Filters;
 using FluentValidation;
 using FluentValidation.AspNetCore;
-using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Calculator.Web.Common.Extensions;
 
@@ -12,6 +13,7 @@ public static class WebServiceExtensions
     {
         services
             .AddAutoMapper(Assembly.GetExecutingAssembly())
+            .AddCustomValidationFilterAttribute()
             .AddMemoryCache()
             .AddOptionsMonitors(configuration)
             .AddSwaggerGen()
@@ -21,6 +23,15 @@ public static class WebServiceExtensions
 
         services.AddControllersWithViews();
         
+        return services;
+    }
+    
+    private static IServiceCollection AddCustomValidationFilterAttribute(this IServiceCollection services)
+    {
+        services.AddMvc(cfg => { cfg.Filters.Add<CustomValidationFilterAttribute>(); });
+
+        services.Configure<ApiBehaviorOptions>(options => { options.SuppressModelStateInvalidFilter = true; });
+
         return services;
     }
 

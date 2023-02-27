@@ -2,5 +2,5 @@
 
 public class ExpressionsConfiguration
 {
-    public int CacheExpirationTimeInSeconds { get; set; }
+    public int HistoryCacheExpirationTimeInSeconds { get; set; }
 }

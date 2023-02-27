@@ -7,26 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="949353a6-b356-4ec4-b7a6-c4c567a0ba19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Calculator.Web/Common/Filters/CustomValidationFilterAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Validators/ExpressionRequestModelValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculator.Tests/Calculator.Tests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Calculator.Tests/Expressions/EvaluateExpressionUnitTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Common/Result/Models/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Common/Result/Models/Result.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Solve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Evaluate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Evaluate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Evaluate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Helpers/ExpressionValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Helpers/ExpressionValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluatedExpressionsHistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluatedExpressionsHistoryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Models/ExpressionHistoryModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Models/EvaluatedExpressionHistoryModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetSolvedExpressionsHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetEvaluatedExpressionsHistory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Models/Settings/ExpressionsConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Models/Settings/ExpressionsConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetEvaluatedExpressionsHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetEvaluatedExpressionsHistory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Extensions/WebServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Extensions/WebServiceExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Middleware/ErrorHandling/ErrorHandlerMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Middleware/ErrorHandling/ErrorHandlerMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Controllers/ExpressionsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Controllers/ExpressionsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Mappings/ExpressionsMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Mappings/ExpressionsMappings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Request/ExpressionRequestModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Request/ExpressionRequestModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/ExpressionHistoryViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/ExpressionHistoryViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/SolvedExpressionViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Models/Response/History/EvaluatedExpressionHistoryViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Expressions/Views/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Expressions/Views/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/wwwroot/css/Experssions/expressionCalculator.css" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/wwwroot/css/Experssions/expressionCalculator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,12 +117,64 @@
       <option name="presentableId" value="Default" />
       <updated>1677343257831</updated>
       <workItem from="1677343258928" duration="15159000" />
-      <workItem from="1677500165665" duration="2884000" />
+      <workItem from="1677500165665" duration="4412000" />
+      <workItem from="1677508511420" duration="26000" />
+      <workItem from="1677508641279" duration="1266000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="233" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 40% 194/322" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 40% 194/322" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Calculator.Application 65% 61/175" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 40% 194/322" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Calculator.Application 65% 61/175" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Calculator.Application 65% 61/175" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 40% 194/322" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Calculator.Application 65% 61/175" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Calculator.Application 65% 61/175" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Expressions 70% 47/159" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 40% 194/322" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Calculator.Application 65% 61/175" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Calculator.Application 65% 61/175" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Expressions 70% 47/159" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 98% 2/89" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 40% 194/322" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Calculator.Application 65% 61/175" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Calculator.Application 65% 61/175" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Expressions 70% 47/159" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Services 98% 2/89" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="EvaluationService 98% 2/89" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">

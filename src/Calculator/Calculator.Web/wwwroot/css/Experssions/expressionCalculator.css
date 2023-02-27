@@ -32,7 +32,7 @@ html, body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 10px;
-    width: 300px;
+    width: 800px;
 }
 
 .history-list {
@@ -47,6 +47,7 @@ html, body {
     padding: 2px;
     text-align: center;
     font-weight: bold;
+    width: 400px;
 }
 
 .history-span {

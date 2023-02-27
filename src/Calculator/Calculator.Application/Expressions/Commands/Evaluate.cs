@@ -31,7 +31,7 @@ public class Evaluate
         public async Task<Result<double>> Handle(Command request, CancellationToken cancellationToken)
         {
             var result = _evaluationService
-                .Calculate(request.Expression);
+                .Evaluate(request.Expression);
 
             await _historyService
                 .SaveEvaluatedExpressionResultAsync(request.Expression, result);

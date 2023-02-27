@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Application", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Infrastructure", "Calculator.Infrastructure\Calculator.Infrastructure.csproj", "{75539E43-F0C7-4753-8D10-8E6678A8F1E6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9E57732B-678E-4557-98E8-D9699B20F80A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests", "Calculator.Tests\Calculator.Tests.csproj", "{60DF6F74-2E4E-4004-BECC-C2EEDAC487A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,12 @@ Global
 		{75539E43-F0C7-4753-8D10-8E6678A8F1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75539E43-F0C7-4753-8D10-8E6678A8F1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75539E43-F0C7-4753-8D10-8E6678A8F1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DF6F74-2E4E-4004-BECC-C2EEDAC487A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DF6F74-2E4E-4004-BECC-C2EEDAC487A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DF6F74-2E4E-4004-BECC-C2EEDAC487A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DF6F74-2E4E-4004-BECC-C2EEDAC487A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{60DF6F74-2E4E-4004-BECC-C2EEDAC487A3} = {9E57732B-678E-4557-98E8-D9699B20F80A}
 	EndGlobalSection
 EndGlobal

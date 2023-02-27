@@ -7,26 +7,39 @@ public static class ExpressionValidator
 {
     private static class ErrorMessage
     {
-        public const string ForInvalidParenthesis
+        public const string ForExpressionContainingInvalidParenthesis
             = "Invalid Parenthesis";
         
-        public const string ForInvalidSymbols
+        public const string ForExpressionContainingInvalidSymbols
             = "Expression can only contain: [0-9, *, /, +, -, (, )]";
+        
+        public const string ForExpressionIsNullOrEmpty
+            = "Expression is empty";
     }
 
     public static void Validate(string expression)
     {
+        ValidateIsNotNullOrEmpty(expression);
         ValidateAllowedSymbols(expression);
         ValidateParentheses(expression);
     }
-    
+
+    private static void ValidateIsNotNullOrEmpty(string expression)
+    {
+        if (string.IsNullOrEmpty(expression))
+        {
+            throw new ArgumentException(
+                ErrorMessage.ForExpressionIsNullOrEmpty);
+        }
+    }
+
     private static void ValidateAllowedSymbols(string expression)
     {
         const string pattern = @"^[0-9\+\-\*\(\)\/\s]*$";
         if (!Regex.IsMatch(expression, pattern))
         {
             throw new ArgumentException(
-                ErrorMessage.ForInvalidSymbols);
+                ErrorMessage.ForExpressionContainingInvalidSymbols);
         }
     }
     
@@ -45,7 +58,7 @@ public static class ExpressionValidator
                 if (!stack.TryPop(out _))
                 {
                     throw new ArgumentException(
-                        ErrorMessage.ForInvalidParenthesis);
+                        ErrorMessage.ForExpressionContainingInvalidParenthesis);
                 }
                 
                 continue;
@@ -57,7 +70,7 @@ public static class ExpressionValidator
         if (stack.Any())
         {
             throw new ArgumentException(
-                ErrorMessage.ForInvalidParenthesis);
+                ErrorMessage.ForExpressionContainingInvalidParenthesis);
         }
     }
 }

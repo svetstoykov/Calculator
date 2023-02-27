@@ -2,5 +2,5 @@
 
 public interface IEvaluationService
 {
-    double Calculate(string expression);
+    double Evaluate(string expression);
 }

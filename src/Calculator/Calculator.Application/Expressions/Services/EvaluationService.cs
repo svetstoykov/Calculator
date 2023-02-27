@@ -8,7 +8,7 @@ namespace Calculator.Application.Expressions.Services;
 
 public class EvaluationService : IEvaluationService
 {
-    public double Calculate(string expression)
+    public double Evaluate(string expression)
     {
         ExpressionValidator.Validate(expression);
         

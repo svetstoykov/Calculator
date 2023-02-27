@@ -45,7 +45,7 @@ public class EvaluatedExpressionsHistoryService : IEvaluatedExpressionsHistorySe
     private ICollection<EvaluatedExpressionHistoryModel> GetOrCreateHistoryFromCache()
     {
         var cacheExpirationInSeconds = _configurationOptionsMonitor
-            .CurrentValue.CacheExpirationTimeInSeconds;
+            .CurrentValue.HistoryCacheExpirationTimeInSeconds;
 
         var history = _cache.GetOrCreate<ICollection<EvaluatedExpressionHistoryModel>>(
             CacheKey, cacheEntry =>

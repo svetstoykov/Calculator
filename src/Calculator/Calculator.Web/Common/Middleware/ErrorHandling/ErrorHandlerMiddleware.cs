@@ -10,7 +10,7 @@ public class ErrorHandlerMiddleware
     {
         public const string WithGenericWording = "Something went wrong";
     }
-    
+
     private readonly RequestDelegate _next;
 
     public ErrorHandlerMiddleware(RequestDelegate next)
@@ -31,13 +31,14 @@ public class ErrorHandlerMiddleware
 
             response.StatusCode = ex switch
             {
-                InvalidOperationException => (int)HttpStatusCode.BadRequest,
-                _ => (int)HttpStatusCode.InternalServerError
+                InvalidOperationException => (int) HttpStatusCode.BadRequest,
+                _ => (int) HttpStatusCode.InternalServerError
             };
 
-            var exceptionResponse = Result<object>.Failure(string.IsNullOrEmpty(ex.Message)
-                ? ErrorMessage.WithGenericWording
-                : ex.Message);
+            var exceptionResponse = Result<object>.Failure(
+                string.IsNullOrEmpty(ex.Message)
+                    ? ErrorMessage.WithGenericWording
+                    : ex.Message);
 
             await response.WriteAsync(JsonSerializer.Serialize(exceptionResponse, new JsonSerializerOptions
             {

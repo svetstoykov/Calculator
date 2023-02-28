@@ -15,12 +15,12 @@ public class EvaluationService : IEvaluationService
         var operatorsAndNumbers = SplitExpressionIntoOperatorsAndNumbers(expression)
             .ToList();
 
-        var (result, _) = Evaluate(operatorsAndNumbers, default);
+        var (result, _) = EvaluateOperatorsAndNumbers(operatorsAndNumbers, default);
 
         return result;
     }
 
-    private static ValueTuple<double, int> Evaluate(IList<string> operatorsAndNumbers, int index)
+    private static ValueTuple<double, int> EvaluateOperatorsAndNumbers(IList<string> operatorsAndNumbers, int index)
     {
         var outerExpression = new List<string>();
         for (var i = index; i < operatorsAndNumbers.Count; i++)
@@ -29,10 +29,9 @@ public class EvaluationService : IEvaluationService
             if (currentItem.IsOpeningParenthesis())
             {
                 var (innerExpressionValue, advancedIndex)
-                    = Evaluate(operatorsAndNumbers, ++i);
+                    = EvaluateOperatorsAndNumbers(operatorsAndNumbers, ++i);
 
-                outerExpression.Add(
-                    innerExpressionValue.ToString(CultureInfo.InvariantCulture));
+                outerExpression.Add(innerExpressionValue.ToString(CultureInfo.InvariantCulture));
 
                 i = advancedIndex;
 

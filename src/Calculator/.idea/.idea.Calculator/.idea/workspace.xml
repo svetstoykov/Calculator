@@ -6,7 +6,18 @@
     <projectFile profileName="https">Calculator.Web/Calculator.Web.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="949353a6-b356-4ec4-b7a6-c4c567a0ba19" name="Changes" comment="" />
+    <list default="true" id="949353a6-b356-4ec4-b7a6-c4c567a0ba19" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Evaluate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Evaluate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluatedExpressionsHistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluatedExpressionsHistoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetEvaluatedExpressionsHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetEvaluatedExpressionsHistory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Tests/Expressions/EvaluateExpressionUnitTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Tests/Expressions/EvaluateExpressionUnitTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/Common/Middleware/ErrorHandling/ErrorHandlerMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/Common/Middleware/ErrorHandling/ErrorHandlerMiddleware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/wwwroot/js/Expressions/expressionCalculator.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,6 +120,7 @@
       <workItem from="1677508511420" duration="26000" />
       <workItem from="1677508641279" duration="1266000" />
       <workItem from="1677569112522" duration="151000" />
+      <workItem from="1677574028997" duration="1201000" />
     </task>
     <servers />
   </component>

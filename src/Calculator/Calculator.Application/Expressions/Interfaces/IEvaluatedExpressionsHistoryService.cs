@@ -4,7 +4,7 @@ namespace Calculator.Application.Expressions.Interfaces;
 
 public interface IEvaluatedExpressionsHistoryService
 {
-    public Task<ICollection<EvaluatedExpressionHistoryModel>> GetOrCreateEvaluatedExpressionsHistoryAsync();
+    public Task<ICollection<EvaluatedExpressionHistoryModel>> GetEvaluatedExpressionsHistoryAsync();
     
-    public Task<bool> SaveEvaluatedExpressionResultAsync(string expression, double result);
+    public Task<bool> AddEvaluatedExpressionResultToHistoryAsync(string expression, double result);
 }

@@ -19,12 +19,11 @@
                 <li>
                    = ${response.data}
                 </li>`)
+
+            input.val('')
         },
         error: function (response) {
             alert(response.responseJSON.message);
-        },
-        complete: function () {
-            input.val('')
         }
     });
 }

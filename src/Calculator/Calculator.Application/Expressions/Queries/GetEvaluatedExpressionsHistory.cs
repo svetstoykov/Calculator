@@ -24,7 +24,7 @@ public class GetEvaluatedExpressionsHistory
             CancellationToken cancellationToken)
         {
             var history = (await _historyService
-                    .GetOrCreateEvaluatedExpressionsHistoryAsync())
+                    .GetEvaluatedExpressionsHistoryAsync())
                 .OrderByDescending(h => h.DateCreated);
 
             return Result<IEnumerable<EvaluatedExpressionHistoryModel>>

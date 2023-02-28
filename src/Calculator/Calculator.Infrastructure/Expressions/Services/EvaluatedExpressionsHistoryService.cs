@@ -9,26 +9,26 @@ namespace Calculator.Infrastructure.Expressions.Services;
 public class EvaluatedExpressionsHistoryService : IEvaluatedExpressionsHistoryService
 {
     private readonly IMemoryCache _cache;
-    private readonly IOptionsMonitor<ExpressionsConfiguration> _configurationOptionsMonitor;
+    private readonly ExpressionsConfiguration _expressionsConfiguration;
 
     private const string CacheKey = nameof(EvaluatedExpressionsHistoryService);
 
     public EvaluatedExpressionsHistoryService(
         IMemoryCache cache,
-        IOptionsMonitor<ExpressionsConfiguration> configurationOptionsMonitor)
+        IOptionsMonitor<ExpressionsConfiguration> expressionsConfigOptionsMonitor)
     {
         _cache = cache;
-        _configurationOptionsMonitor = configurationOptionsMonitor;
+        _expressionsConfiguration = expressionsConfigOptionsMonitor.CurrentValue;
     }
 
-    public async Task<ICollection<EvaluatedExpressionHistoryModel>> GetOrCreateEvaluatedExpressionsHistoryAsync()
+    public async Task<ICollection<EvaluatedExpressionHistoryModel>> GetEvaluatedExpressionsHistoryAsync()
     {
         var history = GetOrCreateHistoryFromCache();
 
-        return await Task.FromResult(history!);
+        return await Task.FromResult(history);
     }
     
-    public async Task<bool> SaveEvaluatedExpressionResultAsync(string expression, double result)
+    public async Task<bool> AddEvaluatedExpressionResultToHistoryAsync(string expression, double result)
     {
         var history = GetOrCreateHistoryFromCache();
 
@@ -44,8 +44,8 @@ public class EvaluatedExpressionsHistoryService : IEvaluatedExpressionsHistorySe
 
     private ICollection<EvaluatedExpressionHistoryModel> GetOrCreateHistoryFromCache()
     {
-        var cacheExpirationInSeconds = _configurationOptionsMonitor
-            .CurrentValue.HistoryCacheExpirationTimeInSeconds;
+        var cacheExpirationInSeconds = _expressionsConfiguration
+            .HistoryCacheExpirationTimeInSeconds;
 
         var history = _cache.GetOrCreate<ICollection<EvaluatedExpressionHistoryModel>>(
             CacheKey, cacheEntry =>

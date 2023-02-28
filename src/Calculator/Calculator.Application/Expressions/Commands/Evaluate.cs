@@ -34,7 +34,7 @@ public class Evaluate
                 .Evaluate(request.Expression);
 
             await _historyService
-                .SaveEvaluatedExpressionResultAsync(request.Expression, result);
+                .AddEvaluatedExpressionResultToHistoryAsync(request.Expression, result);
             
             return Result<double>.Success(result);
         }

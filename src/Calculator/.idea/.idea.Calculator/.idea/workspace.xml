@@ -6,28 +6,16 @@
     <projectFile profileName="https">Calculator.Web/Calculator.Web.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="949353a6-b356-4ec4-b7a6-c4c567a0ba19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Calculator.Tests/Calculator.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator.Tests/Expressions/EvaluateExpressionUnitTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Evaluate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Commands/Evaluate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Helpers/ExpressionValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Helpers/ExpressionValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Interfaces/IEvaluationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Models/Settings/ExpressionsConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Models/Settings/ExpressionsConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetEvaluatedExpressionsHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Queries/GetEvaluatedExpressionsHistory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Application/Expressions/Services/EvaluationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Infrastructure/Expressions/Services/EvaluatedExpressionsHistoryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.Web/wwwroot/css/Experssions/expressionCalculator.css" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.Web/wwwroot/css/Experssions/expressionCalculator.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.sln" afterDir="false" />
-    </list>
+    <list default="true" id="949353a6-b356-4ec4-b7a6-c4c567a0ba19" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5162dcef9ff38f5edc8c81f80f94afbc8848d6536cb6cd8a9f0db26b3a7b1/OptionsServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/59cd7a17e4fcffda1ba3687b386939b4e155ba482f85c8fe9993bc8373d7f93/ApiBehaviorApplicationModelProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/af9ea6f1cc5e79fc868c6fc312a6b423a23d21797d2163065cf548bb19bd6/OptionsBuilderConfigurationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e74356f198b598e97eaeea83e8b7b1f2bfe27c0a39fedf86bb7dc44827fbda/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -120,6 +108,7 @@
       <workItem from="1677500165665" duration="4412000" />
       <workItem from="1677508511420" duration="26000" />
       <workItem from="1677508641279" duration="1266000" />
+      <workItem from="1677569112522" duration="151000" />
     </task>
     <servers />
   </component>

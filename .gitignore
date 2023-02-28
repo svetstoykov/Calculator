@@ -475,3 +475,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Rider
+*.iws
+**/.idea/workspace.xml 
+**/.idea/tasks.xml

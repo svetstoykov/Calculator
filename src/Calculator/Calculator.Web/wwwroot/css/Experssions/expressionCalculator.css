@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    background: linear-gradient(to bottom, #87CEFA, #007FFF);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#expression-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#expression-input {
+    height: 100%;
+}
+
+#evaluate-button {
+    height: 100%;
+    margin-left: 10px;
+}
+
+.history-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    width: 800px;
+}
+
+.history-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0;
+}
+
+.history-list li {
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+    width: 400px;
+}
+
+.history-span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
